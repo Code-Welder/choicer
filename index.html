@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>CHOICER - will make the choice for you</title>
+</head>
+<body>
+
+  <div class="screen">
+    <video src="./assets/universe-sky.mp4" id="bg-vid" autoplay loop muted></video>
+
+    <div class="choicer">
+      <input id="first" type="text" placeholder="First one" class="input">
+      <span class="icon-vs"></span>
+      <input id="second" type="text" placeholder="Second one" class="input"> 
+      <div class="preloader" hidden><span></span><span></span><span></span></div>
+      <div class="answer" hidden></div>     
+    </div>
+
+    <button class="get-answer">The universe, decided for me</button>
+
+  </div>
+
+  <script src="./magic.js"></script>
+</body>
+</html>

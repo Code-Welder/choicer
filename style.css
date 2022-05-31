@@ -1,0 +1,166 @@
+:root {
+  --background: #000;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;  
+  font-family: monospace;
+  display: flex;
+  background-color: var(--background);
+  position: relative;
+  overflow-x: hidden;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+#bg-vid {
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.screen {
+  max-width: 560px;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.choicer {
+  max-width: 420px;
+  height: 200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 8px 16px;
+  width: 100%;
+  border: none;
+  font-size: 24px;
+  transition: box-shadow .2s;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 24px 4px rgb(72, 230, 124, .2);
+}
+
+.input,
+.answer,
+.get-answer {
+  border-radius: 32px;
+  background-color: rgba(0, 0, 0, .8);
+  color: #fff;
+  text-align: center;
+}
+
+#first {
+  margin-bottom: 20px;
+}
+
+.preloader {
+  display: flex; 
+  margin: 0 auto; 
+}
+
+.preloader span {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.preloader span:nth-child(1) {
+  animation: levitate 2s 1s infinite alternate;
+}
+
+.preloader span:nth-child(2) {
+  margin: 0 5px;
+  animation: levitate 2s infinite alternate;
+}
+
+.preloader span:nth-child(3) {
+  animation: levitate 2s .5s infinite alternate;
+}
+
+.answer {
+  font-size: 24px;
+  padding: 14px;
+  box-shadow: 0 0 24px 4px rgb(72, 230, 124, .2);
+}
+
+.get-answer { 
+  padding: 16px;
+  max-width: 180px;
+  margin: 0 auto;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .1em;
+  cursor: pointer;
+}
+
+@keyframes disappear-down {
+  0% {
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 20px) scale(.2);
+  }
+}
+
+@keyframes disappear-up {
+  0% {
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -20px) scale(.2);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translate(0, -20px) scale(.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(5px);
+  }
+}
